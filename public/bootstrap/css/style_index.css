@@ -1,0 +1,47 @@
+@font-face {
+    font-family: MyFont;
+    src: url('/public/fonts/18332.ttf');
+}
+body {
+    height:  100%;
+    width: 100%;
+    font-family: MyFont, sans-serif;
+}
+body {
+     background-image:url("../../img/main_img.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+ }
+#ChooseForm{
+    background-color: white;
+}
+#SearchField
+{
+    background-color: rgba(2,192,130,.80) ;
+    height: 210px;
+    border-radius: 5px;
+
+
+}
+#defaultRegisterFormFirstName, #defaultRegisterFormLastName, #defaultRegisterFormEmail {
+    height: 75px;
+}
+
+#TextRow{
+    padding-top:180px;
+
+
+}
+#train-text-info-p{
+    font-size:65%;
+}
+#btn {
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    border-radius: 3px; /* Скругляем уголки */
+}
+#TextRow h1{
+    color: white;
+}
+nav a{
+    color: white;
+}
