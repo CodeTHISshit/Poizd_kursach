@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="673ec40b-c343-40d8-94f2-4293c14d0ebf" name="Default Changelist" comment="" />
+    <list default="true" id="673ec40b-c343-40d8-94f2-4293c14d0ebf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/place_chooseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/place_chooseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/train_chooseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/train_chooseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/place_choose_index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/css/place_choose_index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/place_choose.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/place_choose.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/train_choose.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/train_choose.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +37,6 @@
     <select />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -127,6 +130,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1UIvNdsFstu16zketibPtFRgTRM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
@@ -189,10 +193,46 @@
       <workItem from="1576315649303" duration="7956000" />
       <workItem from="1576490753297" duration="1024000" />
       <workItem from="1576501547159" duration="20734000" />
+      <workItem from="1576589557236" duration="14772000" />
+      <workItem from="1576654370454" duration="2850000" />
+      <workItem from="1576681189454" duration="14466000" />
+      <workItem from="1576736051481" duration="4298000" />
     </task>
+    <task id="LOCAL-00001" summary="Default">
+      <created>1576598855349</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576598855349</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Default">
+      <created>1576598963782</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576598963782</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default" />
+    <option name="LAST_COMMIT_MESSAGE" value="Default" />
   </component>
 </project>

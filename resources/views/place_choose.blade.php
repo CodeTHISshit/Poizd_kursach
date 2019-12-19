@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -70,13 +71,15 @@
     </div>
 </nav>
 
+
+
 <div class="row justify-content-center">
     <table id="table" class="col-6">
         <tr>
             @foreach($places_2 as $place_2)
 
                 @if($place_2->place_info==0)
-                    <th id="{{$place_2->id}}" class="place" onclick="SelectPlace(this.id,{{$place_2->place}})" title="Верхнє місце">{{$place_2->place}}</th>
+                    <th id="{{$place_2->id}}" class="place" onclick="SelectPlace(this.id,{{$place_2->place}},{{$place_2->vagon}})" title="Верхнє місце">{{$place_2->place}}</th>
 
                 @else
                     <th id="{{$place_2->id}}" class="place"  title="Верхнє місце" style="background:#b8bdd3">{{$place_2->place}}</th>
@@ -90,7 +93,7 @@
             @foreach($places_1 as $place_1)
 
                 @if($place_1->place_info==0)
-                    <th id="{{$place_1->id}}" class="place" onclick="SelectPlace(this.id,{{$place_1->place}})" title="Нижнє місце">{{$place_1->place}}</th>
+                    <th id="{{$place_1->id}}" class="place" onclick="SelectPlace(this.id,{{$place_1->place}},{{$place_1->vagon}})" title="Нижнє місце">{{$place_1->place}}</th>
 
                 @else
                     <th id="{{$place_1->id}}" class="place " title="Нижнє місце" style="background: #b8bdd3">{{$place_1->place}}</th>
@@ -133,25 +136,25 @@
 
 
 <script type="text/javascript">
+   let click = [];
+   for(let i=1;i<41;i++){
+       click[i]=false;
+   }
 
 
-
-
-   let click=false;
-
-        function SelectPlace(val,place) {
+        function SelectPlace(val,place,vagon) {
 
         var els = document.getElementsByName("DeleteX");
         let elem = document.getElementById(val);
         let style = getComputedStyle(elem);
-        if (click===false) {
+        if (click[place]===false) {
             elem.style.backgroundColor = '#02c082';
 
             var tr = document.getElementById('list').innerHTML += "<li class=\"passenger\">\n" +
                 "            <div class=\"passenger-info\">\n" +
                 "                <span class=\"passenger-counter \" style=\"font-size: 18px\"><!----><?php echo $_SESSION["passenger"]?><!----></span>\n" +
-                "                <span class=\"passenger-info-span\"><!----><!---->Потяг 081Л, <!----></span>\n" +
-                "                <span  class=\"passenger-info-span\">вагон 7,</span>\n" +
+                "                <span class=\"passenger-info-span\"><!----><!---->Поїзд №<?php echo $_SESSION["train_number"]?>, <!----></span>\n" +
+                "                <span  class=\"passenger-info-span\">вагон "+vagon+",</span>\n" +
                 "                <span  class=\"passenger-info-span\">місце "+place+"  </span>\n" +
                 "\n" +
                 "            </div>\n" +
@@ -162,12 +165,12 @@
                 "            <button name=\"DeleteX\" onclick=\"this.name\" >X</button>\n" +
                 "        </li>";
             //click++;
-            click=true;
 
-        } else if (click===true) {
+            click[place]=true;
+
+        } else if (click[place]===true) {
             elem.style.backgroundColor = "white";
-
-            click = false;
+            click[place] = false;
         }
 
 
@@ -191,4 +194,4 @@
 
 
 
->
+

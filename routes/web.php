@@ -13,5 +13,5 @@
 
 Route::get('/','main_controller@index');
 Route::post('/train_choose','train_chooseController@index');
-Route::get('/train_choose/place_choose','place_chooseController@index');
+Route::get('/train_choose/{id}/place_choose','place_chooseController@index');
 

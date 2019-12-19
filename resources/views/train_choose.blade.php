@@ -70,7 +70,6 @@
 
     @foreach ($users as $user)
 @if($user->depart==$depart && $user->arrive==$arrive)
-
 <div class="container mt-5 mb-5 ">
     <div class="trip-card " id="trip-017Л">
         <div class="trip-info">
@@ -158,23 +157,25 @@
             </div>
             <div class="bottom-wrapper">
 
-                <div class="transport-type-info">
+                  <div class="transport-type-info">
                     <div class="wagon-features-container">
-                        <span class="wagon-type"><,</span>
-                        <span class="wagon-class">  </span>
-                        <span class="free-seats">14 мест</span>
+                        <span>Вагон:  </span>
+                        <form action="" METHOD="post">
+                        <input name="vagon_id" class="ml-1" type="text">
+                        </form>
                     </div>
                     <div class="wagon-info-container"><!---->
                         <span class="ticket-price"><!---->
-                                        <span class="price-value">  </span><!---->
+                                        <span class="price-value">1000</span><!---->
                                         <span class="price-currency">ГРН</span>
                                     </span><!---->
-                        <button class="select-type-btn progress-btn"
-                                onclick=location="/train_choose/place_choose"  >Выбрать
+
+                        <button class="select-type-btn progress-btn"><a href="{{URL::to('/train_choose')}}/{{$current_id=$user->id_train}}/{{$page_temp='place_choose'}}">Выбрать</a>
 
                         </button>
                     </div>
                 </div><!----><!---->
+
             </div>
         </div><!---->
     </div><!----><!---->

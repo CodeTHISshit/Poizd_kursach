@@ -23,7 +23,7 @@ class train_chooseController extends Controller
             $_SESSION["passenger"]=$passenger;
         $depart = $request->get("depart");
         $arrive=$request->get("arrive");
-
+        $vagons=DB::table('train_composition');
         $users=DB::select('SELECT train.id_train,train.train_number,train.type,train.time_arrive_sender,train.id_station_departure,train.departure_time,train.id_station_arrive,train.time_arrive,train.periodically,
     
     s1.name as arrive,
@@ -41,12 +41,6 @@ ON
 WHERE station.id_station=id_station_arrive
  
 ');
-       
-
-
-
-
-
 
 
         return view("train_choose",['users'=>$users])->with(['depart'=>$depart,'arrive'=>$arrive]);
