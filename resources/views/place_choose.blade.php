@@ -1,5 +1,4 @@
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('bootstrap/css/place_choose_index.css')}}">
-
+    <?php include '\SOFT\OSPanel\domains\poizd\resources\views\php_func\DB_insertV.php';?>
 </head>
 <body>
 
@@ -132,6 +131,7 @@
 <div class="row justify-content-center mt-5">
     <ul id="list" class="passenger-list col-5">
     </ul>
+
 </div>
 
 
@@ -150,10 +150,10 @@
         if (click[place]===false) {
             elem.style.backgroundColor = '#02c082';
 
-            var tr = document.getElementById('list').innerHTML += "<li class=\"passenger\">\n" +
+            var tr = document.getElementById('list').innerHTML += "<li  class=\"passenger\">\n" +
                 "            <div class=\"passenger-info\">\n" +
                 "                <span class=\"passenger-counter \" style=\"font-size: 18px\"><!----><?php echo $_SESSION["passenger"]?><!----></span>\n" +
-                "                <span class=\"passenger-info-span\"><!----><!---->Поїзд №<?php echo $_SESSION["train_number"]?>, <!----></span>\n" +
+                "                <span class=\"passenger-info-span\"><!----><!---->Поїзд №<?php echo  $_SESSION["train_number"]?>, <!----></span>\n" +
                 "                <span  class=\"passenger-info-span\">вагон "+vagon+",</span>\n" +
                 "                <span  class=\"passenger-info-span\">місце "+place+"  </span>\n" +
                 "\n" +
@@ -163,6 +163,7 @@
                 "\n" +
                 "            </div>\n" +
                 "            <button name=\"DeleteX\" onclick=\"this.name\" >X</button>\n" +
+
                 "        </li>";
             //click++;
 

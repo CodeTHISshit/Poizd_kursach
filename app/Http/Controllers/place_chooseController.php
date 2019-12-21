@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class place_chooseController extends Controller
 {
-    public function index($id_train)
+    public function index(Request $request)
     {
+        $vagon_id=$request->get("vagon_id");
+        $id_train=$request->get("train_id");
     session_start();
 
         $passenger=$_SESSION["passenger"];
@@ -15,6 +17,7 @@ class place_chooseController extends Controller
         $vagons=DB::table('train_composition')->where('train_id', $id_train);
 
         $_SESSION["train_number"]=$train_Number;
+
 
     $places_2=DB::select("SELECT
     vagon_place.id,
@@ -28,7 +31,7 @@ FROM
     vagon_place
     INNER Join train_composition on train_composition.vagon_id=vagon_place.vagon_id
 WHERE
-    (place % 2) = 0 and vagon_place.vagon_id=?",array(2));
+    (place % 2) = 0 and vagon_place.vagon_id=?",array($vagon_id));
         $places_1=DB::select("SELECT
     vagon_place.id,
     vagon_place.vagon_id,
@@ -41,7 +44,7 @@ FROM
     vagon_place
     INNER Join train_composition on train_composition.vagon_id=vagon_place.vagon_id
 WHERE
-    (place % 2) = 1 and vagon_place.vagon_id=?",array(2));
+    (place % 2) = 1 and vagon_place.vagon_id=?",array($vagon_id));
 
         return view('place_choose',['places_2'=>$places_2],['places_1'=>$places_1],['vagons'=>$vagons])->with($passenger);
     }

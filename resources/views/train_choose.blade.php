@@ -84,7 +84,7 @@
                     <p class="ng-tns-c25-9">{{$user->type}}  </p>
                 </div><!---->
                 <div class="transport-image-container"><!---->
-                    <img class="transport-image" src='/public/img/'>
+                    <img alt="" class="transport-image" src={{URL::asset($img_url)}} >
                     <div class="popularity-wrapper">
                         <p class="popularity-title">Популярность</p>
                         <div class="popularity-stars"><!---->
@@ -158,11 +158,13 @@
             <div class="bottom-wrapper">
 
                   <div class="transport-type-info">
+                      <form id="Vagon_select" class="d-inline-flex" action="/train_choose/place_choose" METHOD="post">
+                          @csrf
                     <div class="wagon-features-container">
                         <span>Вагон:  </span>
-                        <form action="" METHOD="post">
-                        <input name="vagon_id" class="ml-1" type="text">
-                        </form>
+
+                            <input name="vagon_id" class="ml-1" type="text">
+                            <input type="hidden" value="{{$user->id_train}}" name="train_id">
                     </div>
                     <div class="wagon-info-container"><!---->
                         <span class="ticket-price"><!---->
@@ -170,10 +172,11 @@
                                         <span class="price-currency">ГРН</span>
                                     </span><!---->
 
-                        <button class="select-type-btn progress-btn"><a href="{{URL::to('/train_choose')}}/{{$current_id=$user->id_train}}/{{$page_temp='place_choose'}}">Выбрать</a>
+                        <button type="submit" class="select-type-btn progress-btn">Вибрати
 
                         </button>
                     </div>
+                      </form>
                 </div><!----><!---->
 
             </div>
