@@ -27,29 +27,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class=" collapse navbar-collapse" id="navbarSupportedContent-333">
-        <ul class="navbar-nav ml-auto ">
-            <li class="nav-item active">
-                <a class="nav-link text-white" href="#">Поїзда
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Автобуси</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="ContactUs.html">Літаки</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">Dropdown
-                </a>
-                <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
+
         <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light">
@@ -89,17 +67,17 @@
             <div class="form-row mb-4">
                 <div class="col  mr-5">
                     <!-- First name -->
-                    <input name="depart" type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Відправна точка">
+                    <input name="depart" type="text" id="defaultRegisterFormFirstName" class="form-control" autocomplete="on" placeholder="Відправна точка">
                 </div>
                 <div>
                     <i class="far fa-compass" aria-hidden="true" onclick=""></i>
                 </div>
                 <div class="col mr-3 ml-5">
                     <!-- Last name -->
-                    <input name="arrive" type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Кінцева точка">
+                    <input name="arrive" type="text" id="defaultRegisterFormLastName" autocomplete="on"  class="form-control" placeholder="Кінцева точка">
                 </div>
                 <div class="col">
-                    <input name="passenger" type="text" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="ПІБ">
+                    <input name="passenger" type="text" id="defaultRegisterFormEmail" autocomplete="on" class="form-control mb-4" placeholder="ПІБ">
                 </div>
             </div>
 
@@ -110,6 +88,7 @@
         </form>
     </div>
 </section>
+
 
 
 </body>

@@ -19,14 +19,17 @@ class train_chooseController extends Controller
     }
     public function index(Request $request)
         {
-            $img_diesel = Storage::get('DIESEL2.jpg');
+
             $passenger=$request->get("passenger");
             session_start();
             $_SESSION["passenger"]=$passenger;
-        $depart = $request->get("depart");
+            $depart = $request->get("depart");
         $arrive=$request->get("arrive");
         $vagons=DB::table('train_composition');
-        DB::table('passengers')->insertGetId(array('fio'=>$passenger,'passport'=>0));
+
+        if(isset($passenger))
+            DB::table('passengers')->insertGetId(array('fio'=>$passenger,'passport'=>0));
+
         $users=DB::select('SELECT 
     train.id_train,
     train.train_number,
@@ -54,6 +57,6 @@ WHERE station.id_station=id_station_arrive
 ');
 
 
-        return view("train_choose",['users'=>$users])->with(['depart'=>$depart,'arrive'=>$arrive,'img_url'=>$img_diesel]);
+        return view("train_choose",['users'=>$users])->with(['depart'=>$depart,'arrive'=>$arrive]);
     }
 }

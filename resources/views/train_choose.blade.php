@@ -11,36 +11,16 @@
     <title>Document</title>
 </head>
 <body>
-<nav class="mb-5 navbar navbar-expand-lg   text-dark">
-    <a id="Logo" class=" text-dark navbar-brand" href="#">PoizdaTYT</a>
+<nav class="mb-5 navbar navbar-expand-lg   text-white">
+    <a id="Logo" class=" text-white navbar-brand" href="/">PoizdaTYT</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
             aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class=" collapse navbar-collapse" id="navbarSupportedContent-333">
-        <ul class="navbar-nav ml-auto ">
-            <li class="nav-item active">
-                <a class="nav-link text-dark" href="#">Поїзда
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Автобуси</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="ContactUs.html">Літаки</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">Dropdown
-                </a>
-                <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
+
+
+
         <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light">
@@ -68,7 +48,9 @@
     </div>
 </nav>
 
-    @foreach ($users as $user)
+
+
+@foreach ($users as $user)
 @if($user->depart==$depart && $user->arrive==$arrive)
 <div class="container mt-5 mb-5 ">
     <div class="trip-card " id="trip-017Л">
@@ -84,7 +66,7 @@
                     <p class="ng-tns-c25-9">{{$user->type}}  </p>
                 </div><!---->
                 <div class="transport-image-container"><!---->
-                    <img alt="" class="transport-image" src={{URL::asset($img_url)}} >
+                    <img alt="" class="transport-image" src={{asset('/img/DIESEL.png')}} >
                     <div class="popularity-wrapper">
                         <p class="popularity-title">Популярность</p>
                         <div class="popularity-stars"><!---->
@@ -157,24 +139,24 @@
             </div>
             <div class="bottom-wrapper">
 
-                  <div class="transport-type-info">
-                      <form id="Vagon_select" class="d-inline-flex" action="/train_choose/place_choose" METHOD="post">
+                  <div class="transport-type-info justify-content-around">
+                      <form class="Wagon_form"  action="/train_choose/place_choose" METHOD="post">
                           @csrf
                     <div class="wagon-features-container">
+
                         <span>Вагон:  </span>
 
-                            <input name="vagon_id" class="ml-1" type="text">
-                            <input type="hidden" value="{{$user->id_train}}" name="train_id">
+                            <input name="vagon_id" class="ml-1 form-control form-control-sm" type="text">
+                            <input id="input_train" type="hidden"  value="{{$user->id_train}}" name="train_id">
+
                     </div>
                     <div class="wagon-info-container"><!---->
-                        <span class="ticket-price"><!---->
+                        <span class="ticket-price ml-5"><!---->
                                         <span class="price-value">1000</span><!---->
                                         <span class="price-currency">ГРН</span>
                                     </span><!---->
 
-                        <button type="submit" class="select-type-btn progress-btn">Вибрати
-
-                        </button>
+                        <button type="submit" class="select-type-btn progress-btn">Вибрати</button>
                     </div>
                       </form>
                 </div><!----><!---->

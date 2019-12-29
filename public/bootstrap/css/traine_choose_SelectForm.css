@@ -279,7 +279,7 @@ a {
     background-color:#fff;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-features-container {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form> .wagon-features-container {
     padding: 1px 0 0;
     display: -webkit-box;
     display: flex;
@@ -289,18 +289,18 @@ a {
     flex-grow: 2;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-features-container > .wagon-type {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form> .wagon-features-container > .wagon-type {
     color: #5d5f61;
     font-size: 16px;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-features-container > .wagon-class, .free-seats {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form> .wagon-features-container > .wagon-class, .free-seats {
     font-size: 14px;
     color:rgba(49,49,49,.4);
     margin-left: 5px;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-info-container {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form> .wagon-info-container {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -308,26 +308,26 @@ a {
     position: relative;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-info-container > .ticket-price {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form > .wagon-info-container > .ticket-price {
     white-space: nowrap;
     margin-right: 20px;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-info-container > .ticket-price > .price-value {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form> .wagon-info-container > .ticket-price > .price-value {
     font-size: 24px;
     display: inline-block;
     height: 24px;
     color: #5d5f61;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-info-container > .ticket-price > .price-currency {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form >.wagon-info-container > .ticket-price > .price-currency {
     font-size: 14px;
     vertical-align: super;
     text-transform: lowercase;
     color: #5d5f61;
 }
 
-.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info > .wagon-info-container > .select-type-btn {
+.container > .trip-card > .trip-details > .bottom-wrapper > .transport-type-info >.Wagon_form> .wagon-info-container > .select-type-btn {
     position: relative;
     padding: 0 5px;
     height: 32px;
@@ -342,3 +342,13 @@ a {
     font-size: 14px;
     font-weight: 500;
 }
+.Wagon_form {
+   display: inline-flex;
+    position: relative;
+
+
+}
+#input_train{
+    width: 50%;
+}
+

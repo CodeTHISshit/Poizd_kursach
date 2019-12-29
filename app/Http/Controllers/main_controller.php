@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class main_controller extends Controller
 {
@@ -13,6 +14,7 @@ class main_controller extends Controller
      */
     public function index()
     {
+
         return view("main");
     }
 

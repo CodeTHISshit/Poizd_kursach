@@ -106,31 +106,7 @@ rect:hover{
     color:#9096b9;
 
 }
-table{
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid black;
 
-}
-th{
-    text-align: center;
-    border: 1px solid black;
-    width: 25px;
-    height: 67px;
-    background-color: white;
-
-}
-th:hover{
-    background-color:rgba(139,250,156,0.48);
-}
-th {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
 .wagon-features-container.p{
 
 }
