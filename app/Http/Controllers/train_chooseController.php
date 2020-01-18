@@ -20,12 +20,12 @@ class train_chooseController extends Controller
     public function index(Request $request)
         {
 
-            $passenger=$request->get("passenger");
+
             session_start();
-            $_SESSION["passenger"]=$passenger;
+
             $depart = $request->get("depart");
         $arrive=$request->get("arrive");
-        $vagons=DB::table('train_composition');
+        $vagons=DB::table('train_composition')->get();
 
         if(isset($passenger))
             DB::table('passengers')->insertGetId(array('fio'=>$passenger,'passport'=>0));
@@ -57,6 +57,6 @@ WHERE station.id_station=id_station_arrive
 ');
 
 
-        return view("train_choose",['users'=>$users])->with(['depart'=>$depart,'arrive'=>$arrive]);
+        return view("train_choose",['users'=>$users],['vagons'=>$vagons])->with(['depart'=>$depart,'arrive'=>$arrive]);
     }
 }

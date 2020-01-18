@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Mail;
-
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -18,11 +17,11 @@ class OrderShipped extends Mailable
      *
      * @return void
      */
-    protected $User_name;
+    public $User_name;
 
-    public function __construct($U_name)
+    public function __construct($User_name)
     {
-        $this->User_name=$U_name;
+        $this->User_name=$User_name;
     }
 
     /**

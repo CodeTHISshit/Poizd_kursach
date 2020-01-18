@@ -13,6 +13,7 @@ class place_chooseController extends Controller
         session_start();
         $_SESSION["wagon_id"]=$vagon_id;
         $passenger = $_SESSION["passenger"];
+        $_SESSION["train_id"]=$id_train;
         if (isset($id_train)) {
             $train_Number = DB::table('train')->where('id_train', $id_train)->value('train_number');
 

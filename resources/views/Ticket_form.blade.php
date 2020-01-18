@@ -48,31 +48,30 @@
     <div class="container col-3">
         <!-- Default form contact -->
         <form class=" border border-black p-5 shadow" action="/train_choose/place_choose/Ticket_form/Succses_send" method="post">
-
+            @csrf
             <p class="h4 mb-4">Замовити білет</p>
 
             <!-- Name -->
-
-
+            <p class="m-0">ФІО</p>
             <input  name="FIO" type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="ПІБ" value="{{$fio ?? ''}}">
 
-
-            <input type="password" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Паспорт">
-
-            <input type="text" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Номер Поїзда" value="{{$train_num ?? ''}}">
-
-            <input type="text" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Вагон" value="{{$wagon->vagon ?? ''}}">
-
-            <input type="text" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Тип Місця" value="{{$wagon->place_type ?? ''}}">
-
-            <input type="number" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Номер Місця" value="{{$wagon->place ?? ''}}">
-
-            <input type="number" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Ціна" value="{{$price ?? '0'}}">
+            <p class="m-0">Паспорт</p>
+            <input name="Passport" type="password" id="defaultContactFormEmail" class="form-control mb-4" placeholder="Паспорт">
+            <p class="m-0">№ потяга</p>
+            <input name="Numtrain" type="text" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Номер Поїзда" value="{{$train_num ?? ''}}">
+            <p class="m-0">№ вагона</p>
+            <input name="Wagon" type="text" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Вагон" value="{{$wagon->vagon ?? ''}}">
+            <p class="m-0">Тип місця</p>
+            <input name="Place_type" type="text" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Тип Місця" value="{{$wagon->place_type ?? ''}}">
+            <p class="m-0">№ місця</p>
+            <input name="place_num" type="number" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Номер Місця" value="{{$wagon->place ?? ''}}">
+            <p class="m-0">Ціна</p>
+            <input name="price" type="number" disabled id="defaultContactFormEmail" class="form-control mb-4" placeholder="Ціна" value="{{$price ?? '540'}}">
 
 
             <!-- Subject -->
             <label>Привілегії</label>
-            <select class="browser-default custom-select mb-4">
+            <select name="previlegue" class="browser-default custom-select mb-4">
                 <option value="" disabled>Виберіть привілегію</option>
                 <option value="1" selected>Депутат</option>
                 <option value="2">Ветеран</option>

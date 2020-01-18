@@ -10,8 +10,8 @@ class TicketController extends Controller
     public function index(){
         session_start();
         $place_id=$_GET['place'];
+        $_SESSION['place']=$place_id;
         $place_id = htmlspecialchars($place_id);
-        $fio=$_SESSION["passenger"];
         $train_number=$_SESSION["train_number"];
         $wagon_id=$_SESSION["wagon_id"];
         $wagon_id = htmlspecialchars($wagon_id);
@@ -24,6 +24,6 @@ WHERE train_composition.vagon_id=? and vagon_place.id=?;",array($wagon_id,$place
             if($wag->place_type=="Плацкард")$price=340;
             if($wag->place_type=="Люкс")$price=950;
         }
-        return view("Ticket_form",['wagons'=>$wagon])->with(['fio'=>$fio,'place'=>$place_id,'train_num'=>$train_number,'price'=>$price]);
+        return view("Ticket_form",['wagons'=>$wagon])->with(['place'=>$place_id,'train_num'=>$train_number,'price'=>$price]);
     }
 }

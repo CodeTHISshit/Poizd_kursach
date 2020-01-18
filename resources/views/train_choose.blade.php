@@ -146,13 +146,20 @@
 
                         <span>Вагон:  </span>
 
-                            <input name="vagon_id" class="ml-1 form-control form-control-sm" type="text">
+                        <select class="browser-default custom-select-sm ml-2" name="vagon_id" id="input_train">
+                            @foreach($vagons as $vagon)
+                                @if($vagon->train_id==$user->id_train)
+                                    <option value="{{$vagon->vagon}}">{{$vagon->vagon}}</option>
+                                @endif
+                            @endforeach
+                        </select>
                             <input id="input_train" type="hidden"  value="{{$user->id_train}}" name="train_id">
+
 
                     </div>
                     <div class="wagon-info-container"><!---->
                         <span class="ticket-price ml-5"><!---->
-                                        <span class="price-value">1000</span><!---->
+                                        <span class="price-value">540</span><!---->
                                         <span class="price-currency">ГРН</span>
                                     </span><!---->
 

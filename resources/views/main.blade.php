@@ -66,19 +66,28 @@
             @csrf
             <div class="form-row mb-4">
                 <div class="col  mr-5">
-                    <!-- First name -->
-                    <input name="depart" type="text" id="defaultRegisterFormFirstName" class="form-control" autocomplete="on" placeholder="Відправна точка">
+
+                <!-- <input name="depart" type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Відправна точка">-->
+                    <select class="browser-default custom-select custom-select-lg mb-3" name="depart" id="">
+                        @foreach($stations as $station)
+                            <option value="{{$station->name}}">{{$station->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
+
                 <div>
                     <i class="far fa-compass" aria-hidden="true" onclick=""></i>
                 </div>
                 <div class="col mr-3 ml-5">
                     <!-- Last name -->
-                    <input name="arrive" type="text" id="defaultRegisterFormLastName" autocomplete="on"  class="form-control" placeholder="Кінцева точка">
+                <!--<input name="arrive" type="text" id="defaultRegisterFormLastName" autocomplete="on"  class="form-control" placeholder="Кінцева точка">-->
+                    <select class="browser-default custom-select custom-select-lg mb-3" name="arrive" id="">
+                        @foreach($stations as $station)
+                            <option value="{{$station->name}}">{{$station->name}}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <div class="col">
-                    <input name="passenger" type="text" id="defaultRegisterFormEmail" autocomplete="on" class="form-control mb-4" placeholder="ПІБ">
-                </div>
+
             </div>
 
             <div class="row justify-content-end" >

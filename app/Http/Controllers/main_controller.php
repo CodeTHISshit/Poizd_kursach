@@ -14,8 +14,8 @@ class main_controller extends Controller
      */
     public function index()
     {
-
-        return view("main");
+        $stations=DB::select('Select * from station');
+        return view("main",['stations'=>$stations]);
     }
 
     /**
