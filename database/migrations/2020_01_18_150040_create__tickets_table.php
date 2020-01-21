@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class TicketTable extends Migration
+class CreateTicketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,12 +15,12 @@ class TicketTable extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('passenger_fio')->unsigned();
-            $table->bigInteger('train_num')->unsigned();
-            $table->bigInteger('vagon')->unsigned();
-            $table->bigInteger('place')->unsigned();
+            $table->string('passenger');
+            $table->string('train_num');
+            $table->string('vagon_num');
+            $table->string('place');
             $table->char('privilege');
-            $table->integer('price');
+            $table->string('price');
         });
     }
 
@@ -31,6 +31,6 @@ class TicketTable extends Migration
      */
     public function down()
     {
-
+        Schema::dropIfExists('tickets');
     }
 }

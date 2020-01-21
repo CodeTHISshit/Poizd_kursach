@@ -50,7 +50,7 @@
 <div class="row">
     <div class="container">
 
-        <table class="table table-striped table-responsive-md btn-table">
+        <table class="table table-striped table-responsive-md btn-table shadow-lg ">
 
     <thead>
 
@@ -58,7 +58,6 @@
         <th>#</th>
         <th>Тип місця</th>
         <th>Номер місця</th>
-        <th>Ціна</th>
         <th>Купити</th>
     </tr>
     </thead>
@@ -71,8 +70,8 @@
         <tr>
         <th scope="row" >{{$place->id}}</th>
         <td>{{$place->vagon_type}}</td>
-        <td>{{$place->place}}</td>
-        <td></td>
+        <td style="color: red">{{$place->place}}</td>
+
         <td>
             <button id="{{$place->id}}" type="button" onclick="location.href='https://poizd/train_choose/place_choose/Ticket_form?place='+this.id" class="btn btn-outline-primary btn-sm m-0 waves-effect">Купити</button>
         </td>

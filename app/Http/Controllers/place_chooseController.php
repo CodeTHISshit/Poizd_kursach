@@ -12,13 +12,19 @@ class place_chooseController extends Controller
         $id_train = $request->get("train_id");
         session_start();
         $_SESSION["wagon_id"]=$vagon_id;
-        $passenger = $_SESSION["passenger"];
+
         $_SESSION["train_id"]=$id_train;
         if (isset($id_train)) {
             $train_Number = DB::table('train')->where('id_train', $id_train)->value('train_number');
 
             $_SESSION["train_number"] = $train_Number;
         }
+        if (isset($vagon_id)) {
+            $vagon_Number = DB::table('train_composition')->where('vagon_id', $vagon_id)->value('vagon');
+
+            $_SESSION["vagon_num"] = $vagon_Number;
+        }
+
         $vagons = DB::table('train_composition')->where('train_id', $id_train);
 
         $places = DB::select("SELECT
@@ -36,7 +42,7 @@ FROM
 WHERE
      vagon_place.vagon_id=?", array($vagon_id));
         if (isset($places)) {
-            return view('place_choose', ['places' => $places], ['vagons' => $vagons])->with($passenger);
+            return view('place_choose', ['places' => $places], ['vagons' => $vagons]);
         }
     }
 }

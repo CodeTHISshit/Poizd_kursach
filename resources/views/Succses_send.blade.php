@@ -44,9 +44,12 @@
         </ul>
     </div>
 </nav>
-<div class="row">
-    <div class="container text-center shadow-lg col-5" style="border-radius: 8px;margin-top: 150px">
-        <h1>You succes buy your ticket.<br>Please Wait Email.</h1>
+<div class="row  d-block">
+    <div class="container col-5 text-center">
+    <div class="text-center shadow-lg mb-5 " style="border-radius: 8px;margin-top: 150px">
+        <h1>Ви Успішно придбали свій квиток.</h1>
+    </div>
+    <button class="btn-success btn-lg" onclick="location.href='/'" style="border-radius: 5px;">На Головну</button>
     </div>
 </div>
 </body>

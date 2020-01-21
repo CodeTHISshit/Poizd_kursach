@@ -38,6 +38,9 @@ body {
 #btn {
     padding: 1rem 1.5rem; /* Поля вокруг текста */
     border-radius: 3px; /* Скругляем уголки */
+    margin-top: 40px;
+    color: white;
+
 }
 #TextRow h1{
     color: white;

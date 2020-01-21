@@ -91,7 +91,7 @@
             </div>
 
             <div class="row justify-content-end" >
-                <button id="btn" type="submit"><strong>Замовити</strong></button>;
+                <button id="btn" class="btn-warning" type="submit"><strong>Замовити</strong></button>;
             </div>
 
         </form>
